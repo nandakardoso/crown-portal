@@ -49,22 +49,22 @@ export function Header() {
           {/* Logo */}
           <div className="flex items-center">
             <div className="flex flex-col leading-none mr-3">
-              <span className="font-sans font-extrabold text-xl tracking-[0.22em] text-crown-gray1 uppercase">
+              <span className="font-sans font-extrabold text-2xl tracking-[0.22em] text-crown-gray1 uppercase">
                 TARGET
               </span>
-              <span className="text-[0.55rem] tracking-[0.38em] text-crown-gray3 uppercase font-semibold border-t border-crown-gray4 pt-0.5 mt-0.5">
+              <span className="text-[0.65rem] tracking-[0.38em] text-crown-gray3 uppercase font-semibold border-t border-crown-gray4 pt-0.5 mt-0.5">
                 INSTITUTE
               </span>
             </div>
-            <div className="w-px h-9 bg-crown-gray4 mx-3 self-center" aria-hidden="true" />
-            <div className="relative h-[44px] w-[78px] overflow-hidden">
+            <div className="w-px h-10 bg-crown-gray4 mx-3 self-center" aria-hidden="true" />
+            <div className="relative h-[56px] w-[100px] overflow-hidden">
               <Image
                 src="/images/crown-logo.png"
                 alt="Crown"
                 fill
                 className="object-contain scale-[1.35] origin-center"
                 priority
-                sizes="78px"
+                sizes="100px"
               />
             </div>
           </div>
