@@ -47,7 +47,7 @@ export function Header() {
       <header className="sticky top-0 z-50 bg-crown-black/90 backdrop-blur-xl border-b border-white/[0.04]">
         <div className="max-w-content mx-auto px-7 flex items-center justify-between h-[72px]">
           {/* Logo */}
-          <div className="flex items-center">
+          <Link href="/" className="flex items-center">
             <div className="flex flex-col leading-none mr-3">
               <span className="font-sans font-extrabold text-2xl tracking-[0.22em] text-crown-gray1 uppercase">
                 TARGET
@@ -67,7 +67,7 @@ export function Header() {
                 sizes="100px"
               />
             </div>
-          </div>
+          </Link>
 
           {/* Desktop nav */}
           <nav aria-label="Navegação principal" className="hidden md:flex items-center gap-7">

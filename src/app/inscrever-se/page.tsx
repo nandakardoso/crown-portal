@@ -141,7 +141,7 @@ export default function InscreverSePage() {
           </Field>
 
           {/* Email */}
-          <Field label="E-mail profissional" error={errors.email} required>
+          <Field label="E-mail" error={errors.email} required>
             <input
               name="email"
               type="email"
