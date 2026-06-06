@@ -1,0 +1,81 @@
+import type { GalleryPhoto } from '@/types'
+
+export const galleryPhotos: GalleryPhoto[] = [
+  {
+    id: 'enc1-1',
+    src: '/galeria/encontro-1/2441a7be-f41d-4838-b1c5-08ff1272574b.JPG',
+    alt: '1º Encontro — 30 de Março 2026',
+    category: 'abertura',
+    caption: '1º Encontro — 30 de Março 2026',
+  },
+  {
+    id: 'enc1-2',
+    src: '/galeria/encontro-1/357d586a-3562-4c55-8c45-6b64c71b8418.JPG',
+    alt: '1º Encontro — 30 de Março 2026',
+    category: 'abertura',
+    caption: '1º Encontro — 30 de Março 2026',
+  },
+  {
+    id: 'enc1-3',
+    src: '/galeria/encontro-1/3696b1f1-7b83-43ee-ae22-5f1725c42297.JPG',
+    alt: '1º Encontro — 30 de Março 2026',
+    category: 'abertura',
+    caption: '1º Encontro — 30 de Março 2026',
+  },
+  {
+    id: 'enc1-4',
+    src: '/galeria/encontro-1/3d68bce8-23c8-4b99-81b6-a9571165cbfd.JPG',
+    alt: '1º Encontro — 30 de Março 2026',
+    category: 'abertura',
+    caption: '1º Encontro — 30 de Março 2026',
+  },
+  {
+    id: 'enc1-5',
+    src: '/galeria/encontro-1/4e627b0e-6f6a-46d5-bd62-02117cfd608e.JPG',
+    alt: '1º Encontro — 30 de Março 2026',
+    category: 'abertura',
+    caption: '1º Encontro — 30 de Março 2026',
+  },
+  {
+    id: 'enc1-6',
+    src: '/galeria/encontro-1/675a23f6-e58d-44fa-99db-a925732ad93a.JPG',
+    alt: '1º Encontro — 30 de Março 2026',
+    category: 'abertura',
+    caption: '1º Encontro — 30 de Março 2026',
+  },
+  {
+    id: 'enc1-7',
+    src: '/galeria/encontro-1/930252c8-d194-4ca6-8664-70e52d96f60e.JPG',
+    alt: '1º Encontro — 30 de Março 2026',
+    category: 'abertura',
+    caption: '1º Encontro — 30 de Março 2026',
+  },
+  {
+    id: 'enc1-8',
+    src: '/galeria/encontro-1/b3f98c76-f51b-4d32-9370-8321a1324893.JPG',
+    alt: '1º Encontro — 30 de Março 2026',
+    category: 'abertura',
+    caption: '1º Encontro — 30 de Março 2026',
+  },
+  {
+    id: 'enc1-9',
+    src: '/galeria/encontro-1/c1666cea-98a0-44b8-b890-71dff64c9760.JPG',
+    alt: '1º Encontro — 30 de Março 2026',
+    category: 'abertura',
+    caption: '1º Encontro — 30 de Março 2026',
+  },
+  {
+    id: 'enc1-10',
+    src: '/galeria/encontro-1/c303138c-a9ef-4563-b44e-01c5339719e8.JPG',
+    alt: '1º Encontro — 30 de Março 2026',
+    category: 'abertura',
+    caption: '1º Encontro — 30 de Março 2026',
+  },
+  {
+    id: 'enc1-11',
+    src: '/galeria/encontro-1/d40751c2-0aea-4582-a4a8-5a78e15b80e5.JPG',
+    alt: '1º Encontro — 30 de Março 2026',
+    category: 'abertura',
+    caption: '1º Encontro — 30 de Março 2026',
+  },
+]
