@@ -33,6 +33,12 @@ export const materials: Material[] = [
         label: 'Zoom',
         date: '30/03/2026',
       },
+      {
+        name: 'Gravação — 2º Encontro (Código: 6kbvj32)',
+        href: 'https://us06web.zoom.us/rec/share/EgmepqtN6hDAU1xatcRAlQmu7I2xtXWQpiCO3E3vTiwY-x_1ZKeaiFn8YXPlhs8H.6qfgLc1naOuRT9ZF',
+        label: 'Zoom',
+        date: '08/06/2026',
+      },
     ],
   },
   {

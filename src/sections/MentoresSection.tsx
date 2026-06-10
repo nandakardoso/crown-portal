@@ -17,71 +17,65 @@ function getInitials(name: string): string {
     .toUpperCase()
 }
 
-function MentorAvatar({ mentor }: { mentor: Mentor }) {
+function MentorCard({ mentor }: { mentor: Mentor }) {
   const [imgError, setImgError] = useState(false)
 
-  if (!mentor.image || imgError) {
-    return (
-      <div className="w-20 h-20 rounded-full flex-shrink-0 bg-gradient-to-br from-crown-gold to-crown-rose2 flex items-center justify-center" aria-hidden="true">
-        <span className="font-serif text-2xl text-crown-black font-bold select-none">
-          {getInitials(mentor.name)}
-        </span>
-      </div>
-    )
-  }
-
-  return (
-    <div className="w-20 h-20 rounded-full flex-shrink-0 overflow-hidden relative">
-      <Image
-        src={mentor.image}
-        alt={mentor.name}
-        fill
-        sizes="80px"
-        className="object-cover"
-        onError={() => setImgError(true)}
-      />
-    </div>
-  )
-}
-
-function MentorCard({ mentor }: { mentor: Mentor }) {
   return (
     <motion.div
       variants={revealItem}
-      className="bg-crown-dark2 border border-crown-border-dim rounded-[18px] p-8 hover:border-crown-gold transition-all duration-[280ms] flex flex-col gap-5"
+      className="bg-crown-dark2 border border-crown-border-dim rounded-[18px] overflow-hidden hover:border-crown-gold transition-all duration-[280ms] flex flex-col"
     >
-      {/* Avatar */}
-      <div className="flex items-center gap-5">
-        <MentorAvatar mentor={mentor} />
-        <div>
-          <h3 className="font-serif text-xl font-bold text-crown-white leading-tight">
+      {/* Foto */}
+      <div className="relative w-full aspect-square bg-gradient-to-br from-crown-gold/20 to-crown-rose2/20">
+        {mentor.image && !imgError ? (
+          <Image
+            src={mentor.image}
+            alt={mentor.name}
+            fill
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className="object-cover object-top"
+            onError={() => setImgError(true)}
+          />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center">
+            <span className="font-serif text-6xl text-crown-gold font-bold select-none">
+              {getInitials(mentor.name)}
+            </span>
+          </div>
+        )}
+        {/* Gradiente sobre a foto */}
+        <div className="absolute inset-0 bg-gradient-to-t from-crown-dark2 via-crown-dark2/30 to-transparent" />
+        {/* Nome e cargo sobre o gradiente */}
+        <div className="absolute bottom-0 left-0 right-0 p-6">
+          <h3 className="font-serif text-2xl font-bold text-crown-white leading-tight drop-shadow">
             {mentor.name}
           </h3>
-          <p className="text-crown-rose2 text-sm font-semibold mt-0.5">
+          <p className="text-crown-rose2 text-sm font-semibold mt-1 drop-shadow">
             {mentor.role} · {mentor.company}
           </p>
         </div>
       </div>
 
-      {/* Bio */}
-      <div className="space-y-2">
-        {mentor.bio.map((paragraph, i) => (
-          <p key={i} className="text-crown-gray2 text-sm leading-relaxed">
-            {paragraph}
-          </p>
-        ))}
-      </div>
+      {/* Bio + Tags */}
+      <div className="p-6 flex flex-col gap-4 flex-1">
+        <div className="space-y-2">
+          {mentor.bio.map((paragraph, i) => (
+            <p key={i} className="text-crown-gray2 text-sm leading-relaxed">
+              {paragraph}
+            </p>
+          ))}
+        </div>
 
-      {/* Tags */}
-      <div className="flex flex-wrap gap-2 mt-1">
-        {mentor.tags.map((tag) => (
-          <span
-            key={tag}
-            className="bg-crown-gold/10 border border-crown-gold/20 text-crown-gold text-xs font-semibold rounded-full px-3 py-1"
-          >
-            {tag}
-          </span>
-        ))}
+        <div className="flex flex-wrap gap-2 mt-auto pt-2">
+          {mentor.tags.map((tag) => (
+            <span
+              key={tag}
+              className="bg-crown-gold/10 border border-crown-gold/20 text-crown-gold text-xs font-semibold rounded-full px-3 py-1"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
       </div>
     </motion.div>
   )
