@@ -32,7 +32,7 @@ const rawItems: Array<{
   { date: '30/05/2026', day: '30', month: 'maio',   event: 'Abertura da Mentoria',      special: true },
   { date: '08/06/2026', day: '08', month: 'junho',  event: null },
   { date: '15/06/2026', day: '15', month: 'junho',  event: 'Aula com Marcelo',           blank: true },
-  { date: '22/06/2026', day: '22', month: 'junho',  event: 'Aula com Mylena' },
+  { date: '22/06/2026', day: '22', month: 'junho',  event: null, blank: true },
   { date: '13/07/2026', day: '13', month: 'julho',  event: 'Encontro',                   blank: true },
   { date: '20/07/2026', day: '20', month: 'julho',  event: 'Aula com Cida',              blank: true },
   { date: '27/07/2026', day: '27', month: 'julho',  event: 'Encontro',                   blank: true },

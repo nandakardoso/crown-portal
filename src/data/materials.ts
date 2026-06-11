@@ -42,11 +42,12 @@ export const materials: Material[] = [
     ],
   },
   {
-    id: 'checklists',
-    title: 'Checklists',
-    description: 'Ferramentas práticas de aplicação dos conteúdos.',
+    id: 'agenda',
+    title: 'Agenda',
+    description: 'Cronograma completo dos encontros da mentoria com datas e status.',
     type: 'PDF',
-    icon: 'CheckSquare',
+    icon: 'CalendarDays',
+    href: '#cronograma',
   },
   {
     id: 'templates',
