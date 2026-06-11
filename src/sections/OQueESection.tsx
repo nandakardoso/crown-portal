@@ -42,8 +42,8 @@ export function OQueESection() {
               <ul className="flex flex-col divide-y divide-white/5" role="list">
                 {outcomes.map(item => (
                   <li key={item} className="flex items-center gap-4 py-3.5 text-[0.88rem] font-semibold text-crown-white">
-                    <span className="w-[26px] h-[26px] shrink-0 rounded-full border border-crown-rose-sand/50 flex items-center justify-center" aria-hidden="true">
-                      <ChevronRight className="w-2.5 h-2.5 text-crown-rose-sand" />
+                    <span className="w-[26px] h-[26px] shrink-0 rounded-full border border-crown-rose2/50 flex items-center justify-center" aria-hidden="true">
+                      <ChevronRight className="w-2.5 h-2.5 text-crown-rose2" />
                     </span>
                     {item}
                   </li>
