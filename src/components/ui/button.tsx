@@ -10,7 +10,7 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        rose: 'bg-crown-rose text-crown-white hover:bg-crown-rose2 hover:-translate-y-0.5 hover:shadow-[0_8px_32px_oklch(54%_0.057_45_/_0.40)]',
+        rose: 'bg-crown-rose text-crown-black font-bold hover:bg-crown-rose2 hover:-translate-y-0.5 hover:shadow-[0_8px_32px_oklch(72%_0.061_51_/_0.35)]',
         outline: 'border border-crown-white/20 text-crown-white hover:border-crown-gold hover:text-crown-gold hover:-translate-y-0.5',
         gold: 'bg-crown-gold text-crown-black hover:bg-crown-gold2 hover:-translate-y-0.5',
         ghost: 'text-crown-gray2 hover:text-crown-white',
