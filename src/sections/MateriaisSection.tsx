@@ -21,6 +21,7 @@ import { SectionHeader } from '@/components/shared/SectionHeader'
 import { RevealStagger, revealItem } from '@/components/shared/RevealWrapper'
 import { MateriaisDrawer } from '@/components/shared/MateriaisDrawer'
 import { GravacoesDrawer } from '@/components/shared/GravacoesDrawer'
+import { AgendaModal } from '@/components/shared/AgendaModal'
 import { materials } from '@/data/materials'
 import type { Material } from '@/types'
 
@@ -81,16 +82,12 @@ const agendaItems = agendaRows.map((r) => {
   }
 })
 
-function AgendaCard() {
-  function handleClick() {
-    const el = document.getElementById('cronograma')
-    el?.scrollIntoView({ behavior: 'smooth' })
-  }
+function AgendaCard({ onOpen }: { onOpen: () => void }) {
 
   return (
     <motion.div
       variants={revealItem}
-      onClick={handleClick}
+      onClick={onOpen}
       className="col-span-1 md:col-span-2 lg:col-span-3 cursor-pointer
                  bg-crown-dark3 rounded-[10px] border border-crown-border-dim
                  hover:border-crown-gold transition-all duration-[280ms] overflow-hidden"
@@ -224,6 +221,7 @@ function MaterialCard({
 export function MateriaisSection() {
   const [drawerOpen, setDrawerOpen] = useState(false)
   const [gravacoesOpen, setGravacoesOpen] = useState(false)
+  const [agendaOpen, setAgendaOpen] = useState(false)
 
   const gravacoesMaterial = materials.find((m) => m.id === 'gravacoes')
   const gravacoesFiles = gravacoesMaterial?.files ?? []
@@ -255,12 +253,13 @@ export function MateriaisSection() {
               onClick={material.files?.length ? () => handleCardClick(material) : undefined}
             />
           ))}
-          <AgendaCard />
+          <AgendaCard onOpen={() => setAgendaOpen(true)} />
         </RevealStagger>
       </div>
 
       <MateriaisDrawer open={drawerOpen} onOpenChange={setDrawerOpen} />
       <GravacoesDrawer open={gravacoesOpen} onOpenChange={setGravacoesOpen} recordings={gravacoesFiles} />
+      <AgendaModal open={agendaOpen} onOpenChange={setAgendaOpen} />
     </section>
   )
 }
