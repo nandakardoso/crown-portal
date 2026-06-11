@@ -23,6 +23,7 @@ import { MateriaisDrawer } from '@/components/shared/MateriaisDrawer'
 import { GravacoesDrawer } from '@/components/shared/GravacoesDrawer'
 import { AgendaModal } from '@/components/shared/AgendaModal'
 import { materials } from '@/data/materials'
+import { agendaItems as rawAgendaItems, resolveItem } from '@/data/agenda'
 import type { Material } from '@/types'
 
 const iconMap: Record<string, React.ElementType> = {
@@ -48,41 +49,10 @@ const TYPE_LABELS: Record<Material['type'], string> = {
   IA: 'Inteligência Artificial',
 }
 
-// ── Agenda card data ────────────────────────────────────────────────────────
-
-const TODAY = new Date('2026-06-11')
-
-function parseDate(s: string) {
-  const [d, m, y] = s.split('/').map(Number)
-  return new Date(y, m - 1, d)
-}
-
-const agendaRows: Array<{
-  date: string; day: string; month: string
-  event: string | null; special?: boolean; blank?: boolean
-}> = [
-  { date: '30/05/2026', day: '30', month: 'maio',   event: 'Abertura da Mentoria', special: true },
-  { date: '08/06/2026', day: '08', month: 'junho',  event: null },
-  { date: '15/06/2026', day: '15', month: 'junho',  event: null,   blank: true },
-  { date: '22/06/2026', day: '22', month: 'junho',  event: null,   blank: true },
-  { date: '13/07/2026', day: '13', month: 'julho',  event: null,   blank: true },
-  { date: '20/07/2026', day: '20', month: 'julho',  event: null,   blank: true },
-  { date: '27/07/2026', day: '27', month: 'julho',  event: null,   blank: true },
-  { date: '03/08/2026', day: '03', month: 'agosto', event: null,   blank: true },
-  { date: '10/08/2026', day: '10', month: 'agosto', event: null,   blank: true },
-  { date: '22/08/2026', day: '22', month: 'agosto', event: 'Entrega do Certificado · horário a definir', special: true },
-]
-
-const agendaItems = agendaRows.map((r) => {
-  const isPast = parseDate(r.date) < TODAY
-  return {
-    ...r,
-    concluded: isPast,
-    displayEvent: isPast ? null : r.blank ? null : r.event,
-  }
-})
 
 function AgendaCard({ onOpen }: { onOpen: () => void }) {
+  const today = new Date()
+  const agendaItems = rawAgendaItems.map((r) => resolveItem(r, today))
 
   return (
     <motion.div
@@ -119,7 +89,7 @@ function AgendaCard({ onOpen }: { onOpen: () => void }) {
           >
             {/* Date */}
             <div className="flex-shrink-0 flex items-baseline gap-1 min-w-[68px]">
-              <span className="text-crown-white font-bold text-sm font-serif">{item.day}</span>
+              <span className="text-crown-white font-bold text-sm font-sans">{item.day}</span>
               <span className="text-crown-gold text-xs font-semibold capitalize">{item.month}</span>
             </div>
 
@@ -129,16 +99,18 @@ function AgendaCard({ onOpen }: { onOpen: () => void }) {
                 <span className="inline-flex items-center gap-1 text-[11px] font-semibold
                                  bg-emerald-500/10 border border-emerald-500/20 text-emerald-400
                                  rounded-full px-2 py-0.5">
-                  <CheckCircle2 size={10} />
+                  <CheckCircle2 size={10} aria-hidden="true" />
                   Concluído
                 </span>
               ) : item.displayEvent ? (
                 <span className="text-crown-gray2 text-xs truncate flex items-center gap-1">
-                  {item.special && <Star size={10} className="text-crown-gold fill-crown-gold/40 flex-shrink-0" />}
+                  {item.special && <Star size={10} className="text-crown-gold fill-crown-gold/40 flex-shrink-0" aria-hidden="true" />}
                   {item.displayEvent}
                 </span>
               ) : (
-                <Clock size={12} className="text-crown-gray4" />
+                <span aria-label="A definir">
+                  <Clock size={12} className="text-crown-gray3" aria-hidden="true" />
+                </span>
               )}
             </div>
           </div>
@@ -241,7 +213,6 @@ export function MateriaisSection() {
     <section id="materiais" className="bg-crown-dark2 py-20">
       <div className="max-w-content mx-auto px-7">
         <SectionHeader
-          label="MATERIAIS"
           title="O que você recebe"
         />
 

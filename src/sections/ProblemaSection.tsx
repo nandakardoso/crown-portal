@@ -42,7 +42,7 @@ export function ProblemaSection() {
             <motion.div
               key={p.title}
               variants={revealItem}
-              className="bg-crown-dark3 border border-white/[0.07] border-t-[1.5px] border-t-crown-roseink rounded-sm p-6 transition-colors duration-[280ms] hover:bg-crown-rosedeep/50 hover:border-t-crown-rose"
+              className="bg-crown-dark3 border border-white/[0.07] rounded-sm p-6 transition-colors duration-[280ms] hover:border-crown-rose-ink hover:bg-crown-rose-deep/30"
             >
               <h3 className="font-sans font-bold text-[0.9rem] text-crown-white mb-2">{p.title}</h3>
               <p className="font-sans text-[0.83rem] text-crown-gray2 leading-[1.65]">{p.description}</p>

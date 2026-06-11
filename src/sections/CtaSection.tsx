@@ -43,11 +43,6 @@ export function CtaSection() {
       className="bg-crown-rose-deep py-24 border-t border-crown-rose-ink"
     >
       <div className="max-w-2xl mx-auto px-7 text-center">
-        {/* Label */}
-        <p className="text-crown-rose2 text-xs font-semibold tracking-[0.15em] uppercase mb-4">
-          VAGAS LIMITADAS
-        </p>
-
         {/* Heading */}
         <h2 className="font-serif text-[clamp(1.8rem,3.5vw,3rem)] font-bold text-crown-white leading-tight mb-6 [text-wrap:balance]">
           Pronta para ocupar o lugar que é seu entre as grandes líderes do Brasil?
@@ -108,7 +103,7 @@ export function CtaSection() {
                   onChange={handleChange}
                   placeholder="Seu nome completo"
                   required
-                  className="w-full bg-white/[0.06] border border-white/[0.12] text-crown-gray1 placeholder:text-crown-gray4 text-sm rounded-lg px-4 h-11 focus:outline-none focus:border-crown-gold transition-colors"
+                  className="w-full bg-white/[0.06] border border-white/[0.12] text-crown-gray1 placeholder:text-crown-gray3 text-sm rounded-lg px-4 h-11 focus:outline-none focus:border-crown-gold transition-colors"
                 />
               </div>
 
@@ -135,7 +130,7 @@ export function CtaSection() {
                     placeholder="99999-9999"
                     required
                     inputMode="numeric"
-                    className="flex-1 bg-white/[0.06] border border-white/[0.12] text-crown-gray1 placeholder:text-crown-gray4 text-sm rounded-lg px-4 h-11 focus:outline-none focus:border-crown-gold transition-colors"
+                    className="flex-1 bg-white/[0.06] border border-white/[0.12] text-crown-gray1 placeholder:text-crown-gray3 text-sm rounded-lg px-4 h-11 focus:outline-none focus:border-crown-gold transition-colors"
                   />
                 </div>
               </div>
@@ -149,7 +144,7 @@ export function CtaSection() {
                   onChange={handleChange}
                   placeholder="Conte um pouco sobre você e o que busca no programa..."
                   rows={4}
-                  className="w-full bg-white/[0.06] border border-white/[0.12] text-crown-gray1 placeholder:text-crown-gray4 text-sm rounded-lg px-4 py-3 focus:outline-none focus:border-crown-gold transition-colors resize-none"
+                  className="w-full bg-white/[0.06] border border-white/[0.12] text-crown-gray1 placeholder:text-crown-gray3 text-sm rounded-lg px-4 py-3 focus:outline-none focus:border-crown-gold transition-colors resize-none"
                 />
               </div>
 
