@@ -1,0 +1,23 @@
+{
+  "score": 72,
+  "slug": "src-app-page-tsx",
+  "target": "src/app/page.tsx",
+  "date": "2026-06-11",
+  "p0": [],
+  "p1": [
+    "TODAY hardcoded como new Date('2026-06-11') em MateriaisSection e AgendaModal — a data nunca avança; a partir de amanhã a lógica de concluído/futuro estará errada para todos os usuários",
+    "Placeholder text usa crown-gray4 (oklch 38%) sobre bg white/6 em fundo escuro — contraste insuficiente, falha WCAG AA 4.5:1",
+    "Eyebrow uppercase em todas as seções (MATERIAIS, MENTORES, CRONOGRAMA, VAGAS LIMITADAS) — o DESIGN.md limita a 2-3 por página; acima disso é AI-scaffold saturado"
+  ],
+  "p2": [
+    "AgendaCard usa font-serif (Playfair Display) nos números de data — fonte display em UI compacta cria atrito; Inter bold resolve",
+    "Formulário CTA não tem mensagem de erro visível nos campos obrigatórios — submissão com campo vazio não dá feedback",
+    "Ícone Clock nas datas futuras sem label aria — invisível para screen readers",
+    "Card Agenda span-3 colunas no desktop colapsa para 1 coluna em mobile com 10 linhas de datas — layout muito denso em telas estreitas"
+  ],
+  "p3": [
+    "Em-dashes (7 ocorrências) em layout.tsx detectados — violação do guia de copy do projeto",
+    "AgendaCard e AgendaModal duplicam a mesma constante de datas — fonte de verdade deveria ser única",
+    "Seção Diferenciais passa eyebrow como prop title em vez de label para SectionHeader — padrão inconsistente"
+  ]
+}
