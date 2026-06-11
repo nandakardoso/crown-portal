@@ -70,7 +70,7 @@ const agendaRows: Array<{
   { date: '27/07/2026', day: '27', month: 'julho',  event: null,   blank: true },
   { date: '03/08/2026', day: '03', month: 'agosto', event: null,   blank: true },
   { date: '10/08/2026', day: '10', month: 'agosto', event: null,   blank: true },
-  { date: '22/08/2026', day: '22', month: 'agosto', event: 'Entrega do Certificado', special: true },
+  { date: '22/08/2026', day: '22', month: 'agosto', event: 'Entrega do Certificado · horário a definir', special: true },
 ]
 
 const agendaItems = agendaRows.map((r) => {

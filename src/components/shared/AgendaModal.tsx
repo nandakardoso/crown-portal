@@ -25,7 +25,7 @@ const rawItems = [
   { date: '27/07/2026', day: '27', month: 'Julho',  event: null },
   { date: '03/08/2026', day: '03', month: 'Agosto', event: null },
   { date: '10/08/2026', day: '10', month: 'Agosto', event: null },
-  { date: '22/08/2026', day: '22', month: 'Agosto', event: 'Entrega do Certificado', special: true },
+  { date: '22/08/2026', day: '22', month: 'Agosto', event: 'Entrega do Certificado · horário a definir', special: true },
 ]
 
 const items = rawItems.map((r) => ({
