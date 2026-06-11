@@ -4,7 +4,6 @@ import { OQueESection } from '@/sections/OQueESection'
 import { ModulosSection } from '@/sections/ModulosSection'
 import { DiferenciaisSection } from '@/sections/DiferenciaisSection'
 import { MentoresSection } from '@/sections/MentoresSection'
-import { CronogramaSection } from '@/sections/CronogramaSection'
 import { GaleriaSection } from '@/sections/GaleriaSection'
 import { VideosSection } from '@/sections/VideosSection'
 import { MateriaisSection } from '@/sections/MateriaisSection'
@@ -19,8 +18,7 @@ export default function HomePage() {
       <ModulosSection />
       <DiferenciaisSection />
       <MentoresSection />
-      <CronogramaSection />
-      <GaleriaSection />
+<GaleriaSection />
       <VideosSection />
       <MateriaisSection />
       <CtaSection />

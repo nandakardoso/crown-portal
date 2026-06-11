@@ -11,7 +11,6 @@ import { cn } from '@/lib/utils'
 const NAV_LINKS = [
   { href: '#problema', label: 'A Mentoria' },
   { href: '#mentores', label: 'Mentores' },
-  { href: '#cronograma', label: 'Agenda' },
   { href: '#galeria', label: 'Galeria' },
   { href: '#videos', label: 'Vídeos' },
   { href: '#materiais', label: 'Materiais' },
