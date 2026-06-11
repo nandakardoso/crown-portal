@@ -50,20 +50,6 @@ export const materials: Material[] = [
     href: '#cronograma',
   },
   {
-    id: 'templates',
-    title: 'Templates',
-    description: 'Modelos prontos para scripts, apresentações e comunicações.',
-    type: 'TEMPLATE',
-    icon: 'LayoutTemplate',
-  },
-  {
-    id: 'ia-tools',
-    title: 'Ferramentas de IA',
-    description: 'Prompts e recursos selecionados para ampliar sua performance.',
-    type: 'IA',
-    icon: 'Cpu',
-  },
-  {
     id: 'galeria-fotos',
     title: 'Galeria de Fotos',
     description: 'Fotos oficiais dos encontros.',
