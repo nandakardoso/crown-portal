@@ -185,6 +185,12 @@ export function GaleriaSection() {
     scrollRef.current?.scrollBy({ left: dir === 'right' ? 560 : -560, behavior: 'smooth' })
   }
 
+  useEffect(() => {
+    function handler() { setLightboxIndex(0); setActiveCategory('Todos') }
+    window.addEventListener('open-galeria-lightbox', handler)
+    return () => window.removeEventListener('open-galeria-lightbox', handler)
+  }, [])
+
   const photosWithSrc = galleryPhotos.filter((p) => p.src)
   if (photosWithSrc.length === 0) return null
 

@@ -23,6 +23,7 @@ import { MateriaisDrawer } from '@/components/shared/MateriaisDrawer'
 import { GravacoesDrawer } from '@/components/shared/GravacoesDrawer'
 import { AgendaModal } from '@/components/shared/AgendaModal'
 import { materials } from '@/data/materials'
+import { galleryPhotos } from '@/data/gallery'
 import { agendaItems as rawAgendaItems, resolveItem } from '@/data/agenda'
 import type { Material } from '@/types'
 
@@ -125,9 +126,11 @@ function AgendaCard({ onOpen }: { onOpen: () => void }) {
 function MaterialCard({
   material,
   onClick,
+  photoCount,
 }: {
   material: Material
   onClick?: () => void
+  photoCount?: number
 }) {
   const IconComponent = iconMap[material.icon] ?? FileText
   const isClickable = !!onClick || !!material.href
@@ -145,12 +148,12 @@ function MaterialCard({
       </p>
       {material.files && material.files.length > 0 ? (
         <div className="flex items-center gap-1.5 mt-1 text-crown-gold text-sm font-semibold">
-          <span>{material.files.length} arquivos disponíveis</span>
+          <span>Ver arquivos disponíveis</span>
           <ChevronRight size={15} />
         </div>
       ) : material.href ? (
         <div className="flex items-center gap-1.5 mt-1 text-crown-gold text-sm font-semibold">
-          <span>Ver fotos</span>
+          <span>{photoCount != null ? `${photoCount} fotos disponíveis` : 'Ver fotos'}</span>
           <ChevronRight size={15} />
         </div>
       ) : (
@@ -174,6 +177,21 @@ function MaterialCard({
       >
         {inner}
       </motion.a>
+    )
+  }
+
+  if (material.id === 'galeria-fotos') {
+    return (
+      <motion.div
+        variants={revealItem}
+        onClick={() => {
+          document.getElementById('galeria')?.scrollIntoView({ behavior: 'smooth' })
+          setTimeout(() => window.dispatchEvent(new CustomEvent('open-galeria-lightbox')), 400)
+        }}
+        className={className}
+      >
+        {inner}
+      </motion.div>
     )
   }
 
@@ -222,6 +240,7 @@ export function MateriaisSection() {
               key={material.id}
               material={material}
               onClick={material.files?.length ? () => handleCardClick(material) : undefined}
+              photoCount={material.id === 'galeria-fotos' ? galleryPhotos.length : undefined}
             />
           ))}
           <AgendaCard onOpen={() => setAgendaOpen(true)} />
