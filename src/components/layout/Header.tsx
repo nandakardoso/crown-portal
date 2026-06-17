@@ -48,16 +48,18 @@ export function Header() {
         <div className="max-w-content mx-auto px-7 flex items-center justify-between h-[72px]">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <div className="flex flex-col leading-none mr-3">
-              <span className="font-sans font-extrabold text-2xl tracking-[0.22em] text-crown-gray1 uppercase">
-                TARGET
-              </span>
-              <span className="text-[0.65rem] tracking-[0.38em] text-crown-gray3 uppercase font-semibold border-t border-crown-gray4 pt-0.5 mt-0.5">
-                INSTITUTE
-              </span>
+            <div className="flex items-center mr-3">
+              <Image
+                src="/logo-target.png"
+                alt="Target Institute"
+                width={180}
+                height={55}
+                className="object-contain"
+                priority
+              />
             </div>
             <div className="w-px h-10 bg-crown-gray4 mx-3 self-center" aria-hidden="true" />
-            <div className="relative h-[56px] w-[100px] overflow-hidden">
+            <div className="relative h-[72px] w-[130px] overflow-hidden">
               <Image
                 src="/images/crown-logo.png"
                 alt="Crown"

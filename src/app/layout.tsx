@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Playfair_Display, Inter } from 'next/font/google'
+import { Playfair_Display, Inter, Orbitron } from 'next/font/google'
 import './globals.css'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
@@ -16,6 +16,13 @@ const inter = Inter({
   subsets: ['latin'],
   weight: ['400', '500', '600'],
   variable: '--font-sans',
+  display: 'swap',
+})
+
+const orbitron = Orbitron({
+  subsets: ['latin'],
+  weight: ['700', '900'],
+  variable: '--font-orbitron',
   display: 'swap',
 })
 
@@ -80,7 +87,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="pt-BR" className={`${playfairDisplay.variable} ${inter.variable}`}>
+    <html lang="pt-BR" className={`${playfairDisplay.variable} ${inter.variable} ${orbitron.variable}`}>
       <body>
         <script
           type="application/ld+json"
