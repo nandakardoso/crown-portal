@@ -51,4 +51,26 @@ export const eventsMaterials: EventDay[] = [
       },
     ],
   },
+  {
+    id: 'encontro-3',
+    label: '3º Encontro',
+    date: '15/06/2026',
+    materials: [
+      {
+        name: 'Apresentação — Storytelling e Modulação de Voz',
+        href: '/materiais/crown-apresentacao-15-junho.pdf',
+        type: 'PPT',
+      },
+      {
+        name: 'Material Pós Evento',
+        href: '/materiais/crown-material-pos-evento-15-junho.pdf',
+        type: 'PDF',
+      },
+      {
+        name: 'Gravação da Aula (Zoom) — Código: 9j9gpB%V',
+        href: 'https://us06web.zoom.us/rec/share/7WWb1hjLDfhOOBQaDjz25_TnwOsLMqVhvYfkgbw-lDzkLhUykdDHSFptzZ4_GIVS.UTLQLogdUwoK9Kq9',
+        type: 'VIDEO',
+      },
+    ],
+  },
 ]

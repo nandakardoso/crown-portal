@@ -39,6 +39,12 @@ export const materials: Material[] = [
         label: 'Zoom',
         date: '08/06/2026',
       },
+      {
+        name: 'Gravação — 3º Encontro (Código: 9j9gpB%V)',
+        href: 'https://us06web.zoom.us/rec/share/7WWb1hjLDfhOOBQaDjz25_TnwOsLMqVhvYfkgbw-lDzkLhUykdDHSFptzZ4_GIVS.UTLQLogdUwoK9Kq9',
+        label: 'Zoom',
+        date: '15/06/2026',
+      },
     ],
   },
   {
