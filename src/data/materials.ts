@@ -18,6 +18,11 @@ export const materials: Material[] = [
         href: '/materiais/crown-material-pos-evento-30-maio.pdf',
         label: 'PDF',
       },
+      {
+        name: 'Inteligência Artificial como aliada no universo feminino',
+        href: 'https://www.canva.com/design/DAHNViOH0r0/ru0X9eiogP_HwwXJdINbpw/edit',
+        label: 'Canva',
+      },
     ],
   },
   {
@@ -44,6 +49,12 @@ export const materials: Material[] = [
         href: 'https://us06web.zoom.us/rec/share/7WWb1hjLDfhOOBQaDjz25_TnwOsLMqVhvYfkgbw-lDzkLhUykdDHSFptzZ4_GIVS.UTLQLogdUwoK9Kq9',
         label: 'Zoom',
         date: '15/06/2026',
+      },
+      {
+        name: 'Gravação — 4º Encontro',
+        href: 'https://us06web.zoom.us/rec/share/GgwAB_NjnDC93hFgdNMU12T5eNmhrlUJeZIdKDKJ50bqrVR8kmXUsX_ZaZ_2ONdJ.W3wp1AvG3oHLJ0OT',
+        label: 'Zoom',
+        date: '22/06/2026',
       },
     ],
   },

@@ -73,4 +73,26 @@ export const eventsMaterials: EventDay[] = [
       },
     ],
   },
+  {
+    id: 'encontro-4',
+    label: '4º Encontro',
+    date: '22/06/2026',
+    materials: [
+      {
+        name: 'Material Pós Aula — IA como aliada no universo feminino',
+        href: '/materiais/crown-material-pos-evento-22-junho.pdf',
+        type: 'PDF',
+      },
+      {
+        name: 'Gravação da Aula (Zoom)',
+        href: 'https://us06web.zoom.us/rec/share/GgwAB_NjnDC93hFgdNMU12T5eNmhrlUJeZIdKDKJ50bqrVR8kmXUsX_ZaZ_2ONdJ.W3wp1AvG3oHLJ0OT',
+        type: 'VIDEO',
+      },
+      {
+        name: 'Inteligência Artificial como aliada no universo feminino',
+        href: 'https://www.canva.com/design/DAHNViOH0r0/ru0X9eiogP_HwwXJdINbpw/edit',
+        type: 'PPT',
+      },
+    ],
+  },
 ]
