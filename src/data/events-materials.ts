@@ -44,11 +44,6 @@ export const eventsMaterials: EventDay[] = [
         href: '/materiais/crown-material-pos-evento-08-junho.pdf',
         type: 'PDF',
       },
-      {
-        name: 'Gravação da Aula (Zoom) — Código: 6kbvj32',
-        href: 'https://us06web.zoom.us/rec/share/EgmepqtN6hDAU1xatcRAlQmu7I2xtXWQpiCO3E3vTiwY-x_1ZKeaiFn8YXPlhs8H.6qfgLc1naOuRT9ZF',
-        type: 'VIDEO',
-      },
     ],
   },
   {
@@ -66,11 +61,6 @@ export const eventsMaterials: EventDay[] = [
         href: '/materiais/crown-material-pos-evento-15-junho.pdf',
         type: 'PDF',
       },
-      {
-        name: 'Gravação da Aula (Zoom) — Código: 9j9gpB%V',
-        href: 'https://us06web.zoom.us/rec/share/7WWb1hjLDfhOOBQaDjz25_TnwOsLMqVhvYfkgbw-lDzkLhUykdDHSFptzZ4_GIVS.UTLQLogdUwoK9Kq9',
-        type: 'VIDEO',
-      },
     ],
   },
   {
@@ -82,11 +72,6 @@ export const eventsMaterials: EventDay[] = [
         name: 'Material Pós Aula — IA como aliada no universo feminino',
         href: '/materiais/crown-material-pos-evento-22-junho.pdf',
         type: 'PDF',
-      },
-      {
-        name: 'Gravação da Aula (Zoom)',
-        href: 'https://us06web.zoom.us/rec/share/GgwAB_NjnDC93hFgdNMU12T5eNmhrlUJeZIdKDKJ50bqrVR8kmXUsX_ZaZ_2ONdJ.W3wp1AvG3oHLJ0OT',
-        type: 'VIDEO',
       },
       {
         name: 'Inteligência Artificial como aliada no universo feminino',
